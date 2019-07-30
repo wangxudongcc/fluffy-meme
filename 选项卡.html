@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//       let url = 'http://www.zhufengpeixun.cn/index.html?lx=1&name=zhufeng&teacher=aaa#box';
+// //1.获取问号或者井号后面的值
+// let askIndex = url.indexOf('?');
+// let wellIndex = url.indexOf('#');
+// let askText = url.substring(askIndex + 1, wellIndex);
+// let wellText = url.substring(wellIndex + 1);
+// // askText => "lx=1&name=zhufeng&teacher=aaa"
+// // wellText => "box"
+// //2.问号后面值的详细处理
+// let result = {};
+// let askAry = askText.split('&');
+// //=>["lx=1", "name=zhufeng", "teacher=aaa"]
+// askAry.forEach(item => {
+// 	// item：当前从数组中循环的这一项 
+// 	let n = item.split('=');
+// 	let key = n[0];
+// 	let value = n[1];
+// 	result[key] = value;
+// });
+// result['HASH'] = wellText;
+// console.log(result);
+
+        
+        </script>
+        <script>
+        let url = 'http://www.zhufengpeixun.cn/index.html?lx=1&name=zhufeng&teacher=aaa#box';
+        let askIndex = url.indexOf('?');
+        let wellIndex = url.indexOf('#');
+        let askText = url.substring(askIndex + 1, wellIndex);
+        let wellText = url.substring(wellIndex + 1);
+      
+        let result = {};
+        let askAry = askText.split('&');
+
+        askAry.forEach(item => {
+        let n = item.split('=');
+        let key = n[0];
+        let value = n[1];
+        result[key] = value;
+        });
+        result['HASH'] = wellText;
+        console.log(result);
+        </script>
+</body>
+</html>
